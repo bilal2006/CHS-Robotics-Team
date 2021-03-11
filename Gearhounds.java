@@ -11,40 +11,37 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
 import com.qualcomm.robotcore.util.Range;
-
-@TeleOp(name="Basic: Iterative OpMode", group="Iterative Opmode")
-@Disabled
-
-
+*/
+//@TeleOp(name="Basic: Iterative OpMode", group="Iterative Opmode")
+//@Disabled
 public class GearhoundsDemo {
-pirvate DcMotor leftDrive = null
-pirvate DcMotor rightDrive = null
-pirvate DcMotor flywheelLeft = null
-pirvate DcMotor flywheelRight = null
-piravte DcMototr conveyor = null
-pirvate servo flipLeft = null
-pirvate servo flipRight = null
+ pirvate DcMotor leftDrive = null;
+ pirvate DcMotor rightDrive = null;
+ pirvate DcMotor flywheelLeft = null;
+ pirvate DcMotor flywheelRight = null;
+ piravte DcMototr conveyor = null;
+ pirvate servo flipLeft = null;
+ pirvate servo flipRight = null;
 
+//@Override
+ public void init(){
+  leftDrive = hardwareMap.dcMotor.get("leftDrive");
+  rightDrive = hardwareMap.dcMotor.get("rightDrive");
+  flywheelLeft = hardwareMap.dcMotor.get("flywheelLeft");
+  flywheelRight = hardwareMap.dcMotor.get("flywheelRight");
+  conveyor = hardwareMap.dcMotor.get("conveyor");
+  flipLeft = hardwareMap.dcMotor.get("flipLeft");
+  flipRight = hardwareMap.dcMotor.get("flipRight");
 
-@Override
-public void init(){
-leftDrive = hardwareMap.dcMotor.get("leftDrive");
-rightDrive = hardwareMap.dcMotor.get("rightDrive");
-flywheelLeft = hardwareMap.dcMotor.get("flywheelLeft");
-flywheelRight = hardwareMap.dcMotor.get("flywheelRight");
-conveyor = hardwareMap.dcMotor.get("conveyor");
-flipLeft = hardwareMap.dcMotor.get("flipLeft");
-flipRight = hardwareMap.dcMotor.get("flipRight");
+  leftDrive.setDirection(DcMotorSimple.Direction.REVERSE);
+  rightDrive.setDirection(DcMotorSimple.Direction.REVERSE);
 
-leftDrive.setDirection(DcMotorSimple.Direction.REVERSE);
-rightDrive.setDirection(DcMotorSimple.Direction.REVERSE);
+  telemetry.addData("flipLeft Pos:", flipLeft.getPosition());
+  telemetry.addData("flipRight Pos:", flipRight.getPosition());
 
-telemetry.addData("flipLeft Pos:", flipLeft.getPosition());
-telemetry.addData("flipRight Pos:", flipRight.getPosition());
-
-telemetry.addLine("Initialization Complete");
-telemetry.addLine("Robot Ready");
-telemetry.addLine("When you're ready, press play to start driving.");
+  telemetry.addLine("Initialization Complete");
+  telemetry.addLine("Robot Ready");
+  telemetry.addLine("When you're ready, press play to start driving.");
  } 
 
 @Override
