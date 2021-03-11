@@ -14,16 +14,16 @@ import com.qualcomm.robotcore.util.Range;
 
 @TeleOp(name="Basic: Iterative OpMode", group="Iterative Opmode")
 @Disabled
-
+*/
 
 public class GearhoundsDemo {
-pirvate DcMotor leftDrive = null
-pirvate DcMotor rightDrive = null
-pirvate DcMotor flywheelLeft = null
-pirvate DcMotor flywheelRight = null
-piravte DcMototr conveyor = null
-pirvate servo flipLeft = null
-pirvate servo flipRight = null
+pirvate DcMotor leftDrive = null;
+pirvate DcMotor rightDrive = null;
+pirvate DcMotor flywheelLeft = null;
+pirvate DcMotor flywheelRight = null;
+piravte DcMototr conveyor = null;
+pirvate servo flipLeft = null;
+pirvate servo flipRight = null;
 
 
 @Override
